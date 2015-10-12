@@ -29,6 +29,7 @@
   "devDependencies": {
     "browserify": "^11.2.0",
     "chai": "^3.3.0",
+    "coveralls": "^2.11.4",
     "del": "^2.0.2",
     "gulp": "^3.9.0",
     "istanbul": "^0.3.22",
