@@ -101,9 +101,14 @@ var normjs = {
                     if (o.constructor === Array && o.length) {
                         s = Math.max.apply(null, o);
                     } else if (o.constructor === Object) {
+                        s = null;
                         for (k in o) {
                             if (!o.hasOwnProperty(k)) continue;
-                            s = Math.max(s, o[k]);
+                            if (s === null) {
+                                s = o[k];
+                            } else {
+                                s = Math.max(s, o[k]);
+                            }
                         }
                     }
                     break;
@@ -111,9 +116,14 @@ var normjs = {
                     if (o.constructor === Array && o.length) {
                         s = Math.min.apply(null, o);
                     } else if (o.constructor === Object) {
+                        s = null;
                         for (k in o) {
                             if (!o.hasOwnProperty(k)) continue;
-                            s = Math.min(s, o[k]);
+                            if (s === null) {
+                                s = o[k];
+                            } else {
+                                s = Math.min(s, o[k]);
+                            }
                         }
                     }
                     break;

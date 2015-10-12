@@ -1,6 +1,6 @@
 {
   "name": "norm.js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Array and object normalization",
   "main": "index.js",
   "directories": {

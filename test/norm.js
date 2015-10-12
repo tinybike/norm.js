@@ -256,6 +256,179 @@ describe("norm", function () {
         expected: -1
     });
 
+    test({
+        input: {a: 0},
+        expected: 0
+    });
+    test({
+        input: {a: 1},
+        expected: 1
+    });
+    test({
+        input: {a: 0, b: 0, c: 0, d: 0},
+        expected: 0
+    });
+    test({
+        input: {a: -2, b: 1},
+        expected: -1
+    });
+    test({
+        input: {a: -3, b: -3, c: 0, d: -3},
+        expected: -9
+    });
+    test({
+        input: {a: 0.1, b: 0.2},
+        expected: 0.30000000000000004
+    });
+    test({
+        input: {a: 0.1, b: 3, c: 1.21, d: -1, e: 0.2},
+        expected: 3.5100000000000007
+    });
+
+    test({
+        input: {a: 0},
+        type: "l1",
+        expected: 0
+    });
+    test({
+        input: {a: 1},
+        type: "l1",
+        expected: 1
+    });
+    test({
+        input: {a: 0, b: 0, c: 0, d: 0},
+        type: "l1",
+        expected: 0
+    });
+    test({
+        input: {a: -2, b: 1},
+        type: "l1",
+        expected: 3
+    });
+    test({
+        input: {a: -3, b: -3, c: 0, d: -3},
+        type: "l1",
+        expected: 9
+    });
+    test({
+        input: {a: 0.1, b: 0.2},
+        type: "l1",
+        expected: 0.30000000000000004
+    });
+    test({
+        input: {a: 0.1, b: 3, c: 1.21, d: -1, e: 0.2},
+        type: "l1",
+        expected: 5.5100000000000007
+    });
+
+    test({
+        input: {a: 0},
+        type: "euclidean",
+        expected: 0
+    });
+    test({
+        input: {a: 1},
+        type: "euclidean",
+        expected: 1
+    });
+    test({
+        input: {a: 0, b: 0, c: 0, d: 0},
+        type: "euclidean",
+        expected: 0
+    });
+    test({
+        input: {a: -2, b: 1},
+        type: "euclidean",
+        expected: 2.23606797749979
+    });
+    test({
+        input: {a: -3, b: -3, c: 0, d: -3},
+        type: "euclidean",
+        expected: 5.196152422706632
+    });
+    test({
+        input: {a: 0.1, b: 0.2},
+        type: "euclidean",
+        expected: 0.223606797749979
+    });
+    test({
+        input: {a: 0.1, b: 3, c: 1.21, d: -1, e: 0.2},
+        type: "euclidean",
+        expected: 3.393243286297049
+    });
+
+    test({
+        input: {a: 0},
+        type: "max",
+        expected: 0
+    });
+    test({
+        input: {a: 1},
+        type: "max",
+        expected: 1
+    });
+    test({
+        input: {a: 0, b: 0, c: 0, d: 0},
+        type: "max",
+        expected: 0
+    });
+    test({
+        input: {a: -2, b: 1},
+        type: "max",
+        expected: 1
+    });
+    test({
+        input: {a: -3, b: -3, c: 0, d: -3},
+        type: "max",
+        expected: 0
+    });
+    test({
+        input: {a: 0.1, b: 0.2},
+        type: "max",
+        expected: 0.2
+    });
+    test({
+        input: {a: 0.1, b: 3, c: 1.21, d: -1, e: 0.2},
+        type: "max",
+        expected: 3
+    });
+
+    test({
+        input: {a: 0},
+        type: "min",
+        expected: 0
+    });
+    test({
+        input: {a: 1},
+        type: "min",
+        expected: 1
+    });
+    test({
+        input: {a: 0, b: 0, c: 0, d: 0},
+        type: "min",
+        expected: 0
+    });
+    test({
+        input: {a: -2, b: 1},
+        type: "min",
+        expected: -2
+    });
+    test({
+        input: {a: -3, b: -3, c: 0, d: -3},
+        type: "min",
+        expected: -3
+    });
+    test({
+        input: {a: 0.1, b: 0.2},
+        type: "min",
+        expected: 0.1
+    });
+    test({
+        input: {a: 0.1, b: 3, c: 1.21, d: -1, e: 0.2},
+        type: "min",
+        expected: -1
+    });
+
 });
 
 describe("variance", function () {
