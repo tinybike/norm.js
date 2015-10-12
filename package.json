@@ -1,0 +1,38 @@
+{
+  "name": "norm.js",
+  "version": "0.1.0",
+  "description": "Array and object normalization",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "lint": "jshint index.js && jshint test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinybike/norm.js.git"
+  },
+  "keywords": [
+    "normalize",
+    "length",
+    "distance",
+    "standardize"
+  ],
+  "author": "Jack Peterson <jack@tinybike.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tinybike/norm.js/issues"
+  },
+  "homepage": "https://github.com/tinybike/norm.js#readme",
+  "devDependencies": {
+    "browserify": "^11.2.0",
+    "chai": "^3.3.0",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "jshint": "^2.8.0",
+    "mocha": "^2.3.3",
+    "uglify-js": "^2.5.0"
+  }
+}
