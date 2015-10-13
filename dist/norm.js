@@ -144,38 +144,28 @@ var normjs = {
         return s;
     },
 
-    standardize: function (o, bessel) {
-        var s = this.std(o, bessel);
-        if (o && s) {
+    rescale: function (o, factor) {
+        if (o && factor) {
             if (o.constructor === Array && o.length) {
                 for (var i = 0, l = o.length; i < l; ++i) {
-                    o[i] /= s;
+                    o[i] /= factor;
                 }
             } else if (o.constructor === Object) {
                 for (var k in o) {
                     if (!o.hasOwnProperty(k)) continue;
-                    o[k] /= s;
+                    o[k] /= factor;
                 }
             }
         }
         return o;
     },
 
+    standardize: function (o, bessel) {
+        return this.rescale(o, this.std(o, bessel));
+    },
+
     normalize: function (o, type) {
-        var s = this.norm(o, type);
-        if (o && s) {
-            if (o.constructor === Array && o.length) {
-                for (var i = 0, l = o.length; i < l; ++i) {
-                    o[i] /= s;
-                }
-            } else if (o.constructor === Object) {
-                for (var k in o) {
-                    if (!o.hasOwnProperty(k)) continue;
-                    o[k] /= s;
-                }
-            }
-        }
-        return o;
+        return this.rescale(o, this.norm(o, type));
     }
 
 };

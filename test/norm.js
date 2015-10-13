@@ -856,7 +856,7 @@ describe("standardize", function () {
     });
     test({
         input: {a: 0.1, b: 3, c: 1.21, d: -1, e: 0.2},
-        bessel: 1,
+        bessel: true,
         expected: {
             a: 0.06648195568920466,
             b: 1.9944586706761396,
