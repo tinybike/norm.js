@@ -12,8 +12,13 @@ Usage
 ```
 $ npm install norm.js
 ```
+To use norm.js in Node.js, simply require it:
 ```javascript
 var n = require("norm.js");
+```
+A minified, browserified file `dist/norm.min.js` is included for use in the browser.  Including this file attaches a `normjs` object to `window`:
+```html
+<script src="dist/norm.min.js" type="text/javascript"></script>
 ```
 All of norm.js's methods accept both arrays and objects as inputs.  If an object is used, then calculations are done on the object's values.  The adjusted (normalized) values remain associated with the same key.
 

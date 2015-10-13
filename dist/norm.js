@@ -12,7 +12,7 @@ global.normjs = normjs;
 
 "use strict";
 
-var normjs = {
+module.exports = {
 
     sum: function (o) {
         var s = 0;
@@ -169,7 +169,5 @@ var normjs = {
     }
 
 };
-
-module.exports = normjs;
 
 },{}]},{},[1]);
